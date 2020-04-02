@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "bd0763f5-5fc1-4cc8-b8d1-223bac702761",
+		"name": "astronauts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/astronauts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/astronauts/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"astronauts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/astronauts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Yurij Gagarina\",\n\t\"nationality\":\"soviet\",\n\t\"birthDate\":[  \n      1934,\n      3,\n      9\n   ],\n\t\"deathDate\":[\n\t\t1968,\n\t\t3,\n\t\t27\n\t\t],\n\t\"missions\":\n\t[{\n\t\t\"missionName\":\"Vostok-4\",\n\t\t\"country\":\"Soviet Union\",\n\t\t\"result\":\"SUCCESSFULL\"\n\t\n\t}\n\t\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/astronauts",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"astronauts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get astronaut by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/astronauts/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"astronauts",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
