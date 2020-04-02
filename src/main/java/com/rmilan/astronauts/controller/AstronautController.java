@@ -35,7 +35,7 @@ public class AstronautController {
 
     @GetMapping("astronauts/name/{name}")
     public List<Astronaut> getAstronautByName(@PathVariable("name") String name) {
-        return astronautRepository.findByNameContains(name);
+        return astronautRepository.findByNameContainsIgnoreCase(name);
     }
 
     @PostMapping(value = "/astronauts", consumes = MediaType.APPLICATION_JSON_VALUE)

@@ -9,7 +9,7 @@ public interface AstronautRepository extends JpaRepository<Astronaut, Long> {
 
     Astronaut findByName(String name);
 
-    List<Astronaut> findByNameContains(String name);
+    List<Astronaut> findByNameContainsIgnoreCase(String name);
 
     List<Astronaut> findByNationality(String nationality);
 }
