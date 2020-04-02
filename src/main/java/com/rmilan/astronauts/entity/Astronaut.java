@@ -1,13 +1,10 @@
 package com.rmilan.astronauts.entity;
 
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-
 import java.util.Set;
 
 @Data
@@ -36,9 +33,6 @@ public class Astronaut {
             inverseJoinColumns = {@JoinColumn(name = "mission_id")}
     )
     @Singular
-    @JsonManagedReference(value="anyName")
     private Set<Mission> missions;
-
-    //to avoid Jackson infinite recursion!!!
 
 }
