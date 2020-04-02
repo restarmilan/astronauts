@@ -1,7 +1,6 @@
 package com.rmilan.astronauts.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
@@ -34,6 +33,6 @@ public class Mission {
     @ManyToMany(mappedBy = "missions")
     @Singular
     @EqualsAndHashCode.Exclude
-    @JsonBackReference(value="anyName")
+    @JsonBackReference
     private Set<Astronaut>astronauts;
 }
