@@ -22,6 +22,7 @@ public class Mission {
     private Long id;
 
     @NaturalId
+    @Column(nullable = false, unique = true)
     private String missionName;
 
     private String country;

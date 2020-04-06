@@ -37,14 +37,4 @@ public class Astronaut {
 
     @Singular
     private Set<Mission> missions = new HashSet<>();
-
-    public void addMission(Mission mission) {
-        missions.add(mission);
-        mission.getAstronauts().add(this);
-    }
-
-    public void removeMission(Mission mission) {
-        missions.remove(mission);
-        mission.getAstronauts().remove(this);
-    }
 }
