@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "localhost:8080/api/astronauts",
+          "name": "Get all astronauts",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -23,15 +23,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/astronauts/",
+                  "raw": "localhost:8080/api/astronauts",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"astronauts",
-						""
+                      "astronauts"
 					]
 				}
 			},
@@ -44,7 +43,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\":\"Yurij Gagarina\",\n\t\"nationality\":\"soviet\",\n\t\"birthDate\":[  \n      1934,\n      3,\n      9\n   ],\n\t\"deathDate\":[\n\t\t1968,\n\t\t3,\n\t\t27\n\t\t],\n\t\"missions\":\n\t[{\n\t\t\"missionName\":\"Vostok-4\",\n\t\t\"country\":\"Soviet Union\",\n\t\t\"result\":\"SUCCESSFULL\"\n\t\n\t}\n\t\t]\n}",
+                  "raw": "{\n\t\"name\":\"Yurij Gagarina\",\n\t\"nationality\":\"soviet\",\n\t\"birthDate\":[  \n      1934,\n      3,\n      9\n   ],\n\t\"deathDate\":[\n\t\t1968,\n\t\t3,\n\t\t27\n\t\t],\n\t\"missions\":\n\t[{\n\t\t\"missionName\":\"Vostok-8\",\n\t\t\"country\":\"Soviet Union\",\n\t\t\"result\":\"SUCCESSFULL\"\n\t\n\t}\n\t\t]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -71,7 +70,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/astronauts/6",
+                  "raw": "localhost:8080/api/astronauts/13",
 					"host": [
 						"localhost"
 					],
@@ -79,7 +78,28 @@
 					"path": [
 						"api",
 						"astronauts",
-						"6"
+                      "13"
+                    ]
+                }
+            },
+          "response": []
+        },
+      {
+        "name": "Get astronaut by name",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "localhost:8080/api/astronauts/name/Yuri",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "astronauts",
+              "name",
+              "Yuri"
 					]
 				}
 			},
