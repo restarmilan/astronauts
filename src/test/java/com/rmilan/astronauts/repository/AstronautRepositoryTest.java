@@ -49,7 +49,7 @@ public class AstronautRepositoryTest {
                 .nationality("soviet")
                 .build();
 
-        astronautRepository.save(astronaut);
+        astronautRepository.saveAndFlush(astronaut);
     }
 
     /**

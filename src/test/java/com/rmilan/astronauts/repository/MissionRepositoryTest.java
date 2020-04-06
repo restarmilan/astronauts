@@ -58,7 +58,7 @@ public class MissionRepositoryTest {
                 .country("Soviet Union")
                 .build();
 
-        missionRepository.save(vostok5);
+        missionRepository.saveAndFlush(vostok5);
     }
 
     /**
