@@ -67,7 +67,7 @@ public class MissionRepositoryTest {
      */
     @Test(expected = DataIntegrityViolationException.class)
     public void checkUniqueColumn() {
-        Mission vostok5 = Mission.builder()
+        Mission mission1 = Mission.builder()
                 .missionName("Vostok-5")
                 .startedAt(LocalDate.of(1963, 6, 14))
                 .finishedAt(LocalDate.of(1963, 6, 19))
@@ -75,9 +75,9 @@ public class MissionRepositoryTest {
                 .country("Soviet Union")
                 .build();
 
-        missionRepository.save(vostok5);
+        missionRepository.save(mission1);
 
-        Mission vostok6 = Mission.builder()
+        Mission mission2 = Mission.builder()
                 .missionName("Vostok-5")
                 .startedAt(LocalDate.of(1963, 6, 14))
                 .finishedAt(LocalDate.of(1964, 6, 19))
@@ -85,7 +85,7 @@ public class MissionRepositoryTest {
                 .country("Soviet Union")
                 .build();
 
-        missionRepository.saveAndFlush(vostok6);
+        missionRepository.saveAndFlush(mission2);
     }
 
     @Test

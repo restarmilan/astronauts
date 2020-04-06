@@ -115,7 +115,7 @@ public class AstronautRepositoryTest {
 
         astronautRepository.saveAll(Lists.newArrayList(astronaut1, astronaut2));
 
-        List<Astronaut> results = astronautRepository.findByNameContains("Yuri");
+        List<Astronaut> results = astronautRepository.findByNameContainsIgnoreCase("Yuri");
         //results.forEach(System.out::println);
         assertThat(results)
                 .hasSize(2)
